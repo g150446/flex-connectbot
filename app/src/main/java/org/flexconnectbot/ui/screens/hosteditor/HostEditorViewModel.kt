@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.flexconnectbot.ui.screens.hosteditor
+package org.connectbot.ui.screens.hosteditor
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -25,11 +25,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.flexconnectbot.data.HostRepository
-import org.flexconnectbot.data.PubkeyRepository
-import org.flexconnectbot.data.entity.Host
-import org.flexconnectbot.data.entity.Pubkey
-import org.flexconnectbot.util.PasswordUtils
+import org.connectbot.data.HostRepository
+import org.connectbot.data.PubkeyRepository
+import org.connectbot.data.entity.Host
+import org.connectbot.data.entity.Pubkey
+import org.connectbot.util.PasswordUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
