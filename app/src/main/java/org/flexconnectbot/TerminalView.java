@@ -554,10 +554,8 @@ public class TerminalView extends FrameLayout implements FontSizeChangedListener
 			EditorInfo.IME_FLAG_NO_EXTRACT_UI |
 			EditorInfo.IME_FLAG_NO_ENTER_ACTION |
 			EditorInfo.IME_ACTION_NONE;
-		// Turn off suggestions
-		outAttrs.inputType = EditorInfo.TYPE_NULL |
-				EditorInfo.TYPE_TEXT_VARIATION_PASSWORD |
-				EditorInfo.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD |
+		// Allow user's preferred input method while disabling suggestions
+		outAttrs.inputType = EditorInfo.TYPE_CLASS_TEXT |
 				EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
 		return new BaseInputConnection(this, false) {
 			@Override
