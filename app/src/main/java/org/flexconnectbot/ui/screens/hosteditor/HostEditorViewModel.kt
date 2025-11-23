@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.connectbot.ui.screens.hosteditor
+package org.flexconnectbot.ui.screens.hosteditor
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
