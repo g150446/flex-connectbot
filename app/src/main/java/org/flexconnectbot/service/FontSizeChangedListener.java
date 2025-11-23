@@ -1,6 +1,6 @@
 /*
  * ConnectBot: simple, powerful, open-source SSH client for Android
- * Copyright 2017 Kenny Root, Jeffrey Sharkey
+ * Copyright 2007 Kenny Root, Jeffrey Sharkey
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.flexconnectbot.util
 
-import java.security.Security
-import org.conscrypt.OpenSSLProvider
-
-import android.content.Context
+package org.flexconnectbot.service;
 
 /**
- * Loads the Conscrypt provider for the oss (Open Source Software) version of ConnectBot that
- * uses OpenSSL. This provider doesn't rely on Google Play Services.
+ * @author Kenny Root
+ *
  */
-object ProviderLoader {
-	@JvmStatic
-	fun load(context: Context, listener: ProviderLoaderListener) {
-		try {
-			Security.insertProviderAt(OpenSSLProvider(), 1)
-			listener.onProviderLoaderSuccess()
-		} catch (e: Exception) {
-			listener.onProviderLoaderError()
-		}
-	}
+public interface FontSizeChangedListener {
+
+	/**
+	 * @param sizeDp
+	 *            new font size in dp
+	 */
+	void onFontSizeChanged(float sizeDp);
 }

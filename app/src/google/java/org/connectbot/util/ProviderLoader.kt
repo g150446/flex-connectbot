@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.connectbot.util
+package org.flexconnectbot.util
 
 import android.content.Context
 import android.content.Intent

@@ -1,6 +1,6 @@
 /*
  * ConnectBot: simple, powerful, open-source SSH client for Android
- * Copyright 2017 Kenny Root, Jeffrey Sharkey
+ * Copyright 2025 Kenny Root
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.flexconnectbot.util
 
-import java.security.Security
-import org.conscrypt.OpenSSLProvider
+package org.flexconnectbot.data
 
-import android.content.Context
+import androidx.room.TypeConverter
+import org.flexconnectbot.data.entity.KeyStorageType
 
 /**
- * Loads the Conscrypt provider for the oss (Open Source Software) version of ConnectBot that
- * uses OpenSSL. This provider doesn't rely on Google Play Services.
+ * Room type converters for custom types used in database entities.
  */
-object ProviderLoader {
-	@JvmStatic
-	fun load(context: Context, listener: ProviderLoaderListener) {
-		try {
-			Security.insertProviderAt(OpenSSLProvider(), 1)
-			listener.onProviderLoaderSuccess()
-		} catch (e: Exception) {
-			listener.onProviderLoaderError()
-		}
-	}
+class Converters {
+    @TypeConverter
+    fun fromKeyStorageType(value: KeyStorageType): String {
+        return value.name
+    }
+
+    @TypeConverter
+    fun toKeyStorageType(value: String): KeyStorageType {
+        return KeyStorageType.valueOf(value)
+    }
 }

@@ -95,7 +95,7 @@
 		</activity>
 
 		<service
-			android:name="org.connectbot.service.TerminalManager"
+			android:name="org.flexconnectbot.service.TerminalManager"
 			android:configChanges="keyboardHidden|orientation"
 			android:description="@string/service_desc"
 			android:foregroundServiceType="remoteMessaging"/>

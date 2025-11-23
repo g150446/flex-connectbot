@@ -42,11 +42,11 @@ appVersioning {
 }
 
 android {
-    namespace = "org.connectbot"
+    namespace = "org.flexconnectbot"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "org.connectbot"
+        applicationId = "org.flexconnectbot"
 
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
@@ -57,7 +57,7 @@ android {
             abiFilters.addAll(listOf("x86", "x86_64", "armeabi-v7a", "arm64-v8a"))
         }
 
-        testApplicationId = "org.connectbot.tests"
+        testApplicationId = "org.flexconnectbot.tests"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // The following argument makes the Android Test Orchestrator run its
