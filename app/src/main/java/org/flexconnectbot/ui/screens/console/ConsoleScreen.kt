@@ -362,7 +362,7 @@ fun ConsoleScreen(
                                             )
                                         }
 
-                                        // Show inline prompts from the current bridge (non-modal at bottom)
+                                        // Show inline prompts from the current bridge (centered on screen)
                                         // Must be AFTER keyboard so prompts appear on top (z-order)
                                         val promptState by bridge.promptManager.promptState.collectAsState()
 
@@ -382,7 +382,7 @@ fun ConsoleScreen(
                                                 }
                                             },
                                             modifier = Modifier
-                                                .align(Alignment.BottomCenter)
+                                                .align(Alignment.Center)
                                         )
                                     }
                                 }
